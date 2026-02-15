@@ -1,63 +1,55 @@
 document.addEventListener('DOMContentLoaded', () => {
     const generateBtn = document.getElementById('generate');
     const resetBtn = document.getElementById('reset');
-    const lottoGamesContainer = document.getElementById('lotto-games');
+    const dinnerSuggestionsContainer = document.getElementById('dinner-suggestions');
     const themeSwitch = document.getElementById('checkbox');
 
-    // Function to get a color based on the number
-    const getColor = (number) => {
-        if (number <= 10) return '#f39c12'; // Yellow
-        if (number <= 20) return '#3498db'; // Blue
-        if (number <= 30) return '#e74c3c'; // Red
-        if (number <= 40) return '#2ecc71'; // Green
-        return '#9b59b6'; // Purple
-    };
+    const dinnerMenu = [
+        '김치찌개', '된장찌개', '비빔밥', '불고기', '제육볶음',
+        '치킨', '피자', '파스타', '햄버거', '스테이크',
+        '짜장면', '짬뽕', '탕수육', '마라탕', '양꼬치',
+        '초밥', '라멘', '돈까스', '우동', '회덮밥',
+        '쌀국수', '분짜', '팟타이', '커리', '샌드위치'
+    ];
 
-    // Function to generate a single lotto game
-    const generateLottoGame = (gameIndex) => {
-        const numbers = new Set();
-        while (numbers.size < 6) {
-            numbers.add(Math.floor(Math.random() * 45) + 1);
-        }
+    // Function to generate a single dinner suggestion
+    const generateDinnerSuggestion = (suggestionIndex) => {
+        const randomIndex = Math.floor(Math.random() * dinnerMenu.length);
+        const suggestedMenu = dinnerMenu[randomIndex];
 
-        const sortedNumbers = Array.from(numbers).sort((a, b) => a - b);
-
-        const gameElement = document.createElement('div');
-        gameElement.classList.add('lotto-game');
+        const suggestionElement = document.createElement('div');
+        suggestionElement.classList.add('suggestion-card');
 
         const titleElement = document.createElement('div');
-        titleElement.classList.add('game-title');
-        titleElement.textContent = `게임 ${gameIndex + 1}`;
-        gameElement.appendChild(titleElement);
+        titleElement.classList.add('card-title');
+        titleElement.textContent = `추천 #${suggestionIndex + 1}`;
+        suggestionElement.appendChild(titleElement);
 
-        const numbersElement = document.createElement('div');
-        numbersElement.classList.add('numbers');
+        const contentElement = document.createElement('div');
+        contentElement.classList.add('suggestion-content');
+        
+        const menuTextElement = document.createElement('p');
+        menuTextElement.classList.add('suggestion-text');
+        menuTextElement.textContent = suggestedMenu;
+        contentElement.appendChild(menuTextElement);
 
-        sortedNumbers.forEach(number => {
-            const numberElement = document.createElement('div');
-            numberElement.classList.add('number');
-            numberElement.textContent = number;
-            numberElement.style.backgroundColor = getColor(number);
-            numbersElement.appendChild(numberElement);
-        });
-
-        gameElement.appendChild(numbersElement);
-        return gameElement;
+        suggestionElement.appendChild(contentElement);
+        return suggestionElement;
     };
 
     // Event listener for the generate button
     generateBtn.addEventListener('click', () => {
-        if (lottoGamesContainer.children.length >= 5) {
-            alert('최대 5개의 게임까지 생성할 수 있습니다.');
+        if (dinnerSuggestionsContainer.children.length >= 5) {
+            alert('최대 5개의 메뉴까지 추천받을 수 있습니다.');
             return;
         }
-        const newGame = generateLottoGame(lottoGamesContainer.children.length);
-        lottoGamesContainer.appendChild(newGame);
+        const newSuggestion = generateDinnerSuggestion(dinnerSuggestionsContainer.children.length);
+        dinnerSuggestionsContainer.appendChild(newSuggestion);
     });
 
     // Event listener for the reset button
     resetBtn.addEventListener('click', () => {
-        lottoGamesContainer.innerHTML = '';
+        dinnerSuggestionsContainer.innerHTML = '';
     });
 
     // Theme switcher
