@@ -30,6 +30,25 @@
                 <button id="generate" data-lang-key="generateButton">메뉴 추천</button>
             </div>
         </main>
+
+        <section id="contact-form-section">
+            <h2 data-lang-key="contactHeading">제휴 문의</h2>
+            <form action="https://formspree.io/f/mzdarkep" method="POST" id="partnership-form">
+                <div class="form-group">
+                    <label for="name">이름</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">이메일</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">메시지</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" data-lang-key="submitButton">문의 보내기</button>
+            </form>
+        </section>
     </div>
     <script src="script.js"></script>
 </body>

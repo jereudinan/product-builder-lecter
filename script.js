@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
             siteTitle: '저녁 메뉴 추천기',
             headerTitle: '오늘 뭐 먹지?',
             generateButton: '메뉴 추천',
+            contactHeading: '제휴 문의',
+            submitButton: '문의 보내기',
             dinnerMenu: [
                 '김치찌개', '된장찌개', '비빔밥', '불고기', '제육볶음', '치킨', '피자', '파스타', 
                 '햄버거', '스테이크', '짜장면', '짬뽕', '탕수육', '마라탕', '양꼬치', '초밥', 
@@ -20,6 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
             siteTitle: 'Dinner Menu Recommender',
             headerTitle: 'What to eat tonight?',
             generateButton: 'Suggest Menu',
+            contactHeading: 'Partnership Inquiry',
+            submitButton: 'Send Inquiry',
             dinnerMenu: [
                 'Kimchi Stew', 'Doenjang Jjigae', 'Bibimbap', 'Bulgogi', 'Spicy Pork Stir-fry', 'Chicken', 'Pizza', 'Pasta',
                 'Hamburger', 'Steak', 'Jajangmyeon', 'Jjamppong', 'Tangsuyuk', 'Maratang', 'Lamb Skewers', 'Sushi',

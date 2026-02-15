@@ -200,3 +200,76 @@ input:checked + .slider:before {
 .slider.round:before {
     border-radius: 50%;
 }
+
+
+/* Contact Form Section */
+#contact-form-section {
+    background-color: var(--card-background);
+    padding: 40px;
+    margin-top: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+#contact-form-section h2 {
+    color: var(--header-color);
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+#partnership-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--slider-background);
+    border-radius: 5px;
+    background-color: var(--background-start); /* Use a subtle background */
+    color: var(--text-color);
+    font-size: 1rem;
+    box-sizing: border-box; /* Ensure padding doesn't increase width */
+    transition: border-color 0.3s;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+    border-color: var(--button-background);
+    outline: none;
+}
+
+#partnership-form button[type="submit"] {
+    background-color: var(--button-background);
+    color: var(--button-text);
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+#partnership-form button[type="submit"]:hover {
+    opacity: 0.9;
+}
