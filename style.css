@@ -1,6 +1,6 @@
 :root {
-    --background-start: #f2f2f2;
-    --background-end: #d9d9d9;
+    --background-start: #89f7fe;
+    --background-end: #66a6ff;
     --text-color: #333;
     --card-background: #fff;
     --button-background: #4CAF50;
@@ -10,8 +10,8 @@
 }
 
 [data-theme="dark"] {
-    --background-start: #2c3e50;
-    --background-end: #34495e;
+    --background-start: #4854e4;
+    --background-end: #292E49;
     --text-color: #ecf0f1;
     --card-background: #2c3e50;
     --button-background: #3498db;
