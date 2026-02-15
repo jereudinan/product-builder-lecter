@@ -43,9 +43,40 @@ header {
 
 h1 {
     color: var(--header-color);
-    text-align: center;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     margin: 0;
+    flex-grow: 1;
+}
+
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.lang-switch-wrapper {
+    display: flex;
+    align-items: center;
+    background-color: var(--slider-background);
+    border-radius: 20px;
+    padding: 3px;
+}
+
+.lang-btn {
+    background-color: transparent;
+    border: none;
+    color: var(--text-color);
+    padding: 5px 15px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 17px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.lang-btn.active {
+    background-color: var(--card-background);
+    color: var(--header-color);
 }
 
 .controls {

@@ -3,24 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>저녁 메뉴 추천기</title>
+    <title data-lang-key="siteTitle">저녁 메뉴 추천기</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <header>
             <h1>오늘 뭐 먹지?</h1>
-            <div class="theme-switch-wrapper">
-                <label class="theme-switch" for="checkbox">
-                    <input type="checkbox" id="checkbox" />
-                    <div class="slider round"></div>
-                </label>
+            <div class="header-controls">
+                <div class="lang-switch-wrapper">
+                    <button id="lang-ko" class="lang-btn active">KO</button>
+                    <button id="lang-en" class="lang-btn">EN</button>
+                </div>
+                <div class="theme-switch-wrapper">
+                    <label class="theme-switch" for="checkbox">
+                        <input type="checkbox" id="checkbox" />
+                        <div class="slider round"></div>
+                    </label>
+                </div>
             </div>
         </header>
         <main>
             <div class="controls">
-                <button id="generate">메뉴 추천</button>
-                <button id="reset">다시 추천</button>
+                <button id="generate" data-lang-key="generateButton">메뉴 추천</button>
+                <button id="reset" data-lang-key="resetButton">다시 추천</button>
             </div>
             <div id="dinner-suggestions" class="dinner-suggestions"></div>
         </main>
