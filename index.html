@@ -9,7 +9,6 @@
 <body>
     <div class="container">
         <header>
-            <h1>오늘 뭐 먹지?</h1>
             <div class="header-controls">
                 <div class="lang-switch-wrapper">
                     <button id="lang-ko" class="lang-btn active">KO</button>
@@ -24,11 +23,12 @@
             </div>
         </header>
         <main>
+            <div id="dinner-suggestions" class="dinner-suggestions">
+                <!-- Suggestion will be inserted here by JS -->
+            </div>
             <div class="controls">
                 <button id="generate" data-lang-key="generateButton">메뉴 추천</button>
-                <button id="reset" data-lang-key="resetButton">다시 추천</button>
             </div>
-            <div id="dinner-suggestions" class="dinner-suggestions"></div>
         </main>
     </div>
     <script src="script.js"></script>
